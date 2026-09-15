@@ -37,15 +37,10 @@
 
   <section class="section">
     <div class="container">
-      <!--
-        TODO(Daniel): Send the confirmed 2027 school list and this
-        placeholder becomes a real grid of team cards (same pattern as
-        the tier cards below — one .team-card per school).
-      -->
-      <div class="placeholder-box">
-        <strong>2027 school list coming soon.</strong>
-        <p style="margin-top:10px;">Based on 2024 results, past participants included West Mifflin, Hampton, Baldwin-Whitehall, Moon Area, Mt. Lebanon, Fox Chapel, Thomas Jefferson, Neighborhood Academy, North Hills, Highlands, South Park, Bethel Park, Montour, Avonworth, Chartiers Valley, Quaker Valley, Woodland Hills, Gateway, Riverview, Shaler Area, South Allegheny, McKeesport, Upper Saint Clair, Carlynton, and Plum. Send us the confirmed 2027 list and we'll publish it here.</p>
-      </div>
+      <div id="teams-grid" class="teams-grid"><!-- rendered by schools.js --></div>
+      <p id="teams-empty" class="schedule-note" style="display:none;">
+        2027 school list coming soon &mdash; check back closer to the tournament.
+      </p>
     </div>
   </section>
 
@@ -69,6 +64,7 @@
     </div>
   </footer>
 
+  <script src="schools.js"></script>
   <script>
     document.querySelector('.nav-toggle')?.addEventListener('click', function() {
       document.querySelector('.nav-menu').classList.toggle('active');
