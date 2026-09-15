@@ -329,6 +329,28 @@ const RESULTS = [
   },
 ];
 
+/*
+ * Each raw placement line encodes a placement match, e.g.:
+ *   "1st Mason Keesecker (West Mifflin) TF Cayden Barry (Hampton), 20-2 2:20"
+ * The winner takes the named place; the loser takes the next place down
+ * (loser of the "1st" match = 2nd, loser of "3rd" match = 4th, etc).
+ * This derives the full 1-6 (2024/2025) or 1-8 (2026) placer list from
+ * the same source data without carrying the match score/detail text.
+ */
+function parsePlacers(lines) {
+  const placers = [];
+  const re = /^(\d+)\w*\s+(.+?)\s*\(([^)]+)\)\s+\S+\s+(.+?)\s*\(([^)]+)\)/;
+  for (const line of lines) {
+    const m = line.match(re);
+    if (!m) continue;
+    const place = parseInt(m[1], 10);
+    placers.push({ place, name: m[2].trim(), school: m[3].trim() });
+    placers.push({ place: place + 1, name: m[4].trim(), school: m[5].trim() });
+  }
+  placers.sort((a, b) => a.place - b.place);
+  return placers;
+}
+
 function renderResults() {
   const tabsEl = document.getElementById("year-tabs");
   const panelEl = document.getElementById("year-panel");
@@ -342,14 +364,17 @@ function renderResults() {
     const data = RESULTS.find(r => r.year === year);
     if (!data) return;
 
-    const weightsHtml = data.weights.map(w => `
-      <div class="weight-card">
-        <div class="weight-num">${w.wt}</div>
-        <ul class="weight-placements">
-          ${w.placements.map(p => `<li>${p}</li>`).join("")}
-        </ul>
-      </div>
-    `).join("");
+    const weightsHtml = data.weights.map(w => {
+      const placers = parsePlacers(w.placements);
+      return `
+        <div class="weight-card">
+          <div class="weight-num">${w.wt}</div>
+          <ol class="weight-placements">
+            ${placers.map(p => `<li><strong>${p.place}.</strong> ${p.name} (${p.school})</li>`).join("")}
+          </ol>
+        </div>
+      `;
+    }).join("");
 
     const standingsHtml = data.teamStandings ? `
       <h3 class="results-subhead">Team Standings</h3>
@@ -360,7 +385,7 @@ function renderResults() {
         </tbody>
       </table>
     ` : `
-      <p class="results-archive-note">Team standings not available for ${year}.</p>
+      <p class="results-archive-note">Team standings for ${year} coming soon.</p>
     `;
 
     panelEl.innerHTML = `
