@@ -79,18 +79,9 @@ a { color: inherit; }
   letter-spacing: 0.5px;
 }
 
-.nav-logo .badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: var(--navy-dark);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.95rem;
+.nav-logo img {
+  height: 44px;
+  width: auto;
 }
 
 .nav-menu {
@@ -181,6 +172,12 @@ a { color: inherit; }
 }
 
 .hero-content { position: relative; max-width: 880px; margin: 0 auto; }
+
+.hero-logo {
+  max-width: 360px;
+  width: 60%;
+  margin: 0 auto 30px;
+}
 
 .hero-eyebrow {
   display: inline-block;
@@ -765,17 +762,9 @@ a { color: inherit; }
 
 .footer-logo { display: flex; align-items: center; gap: 12px; }
 
-.footer-logo .badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--gold);
-  color: var(--navy-dark);
-  font-family: var(--font-display);
-  font-weight: 700;
+.footer-logo img {
+  height: 44px;
+  width: auto;
 }
 
 .footer-logo p { font-family: var(--font-display); color: var(--white); font-size: 1rem; }
