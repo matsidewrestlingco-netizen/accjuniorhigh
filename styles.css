@@ -674,6 +674,78 @@ a { color: inherit; }
   color: var(--gray-600);
 }
 
+/* Results archive tabs */
+
+.year-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.year-tab {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 10px 26px;
+  border-radius: 30px;
+  border: 2px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.year-tab:hover { background: var(--gray-100); }
+
+.year-tab.active {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.results-subhead {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--navy-dark);
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.results-subhead:first-child { margin-top: 0; }
+
+.weights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.weight-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.weight-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold-dark);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.weight-num::after { content: ' LBS'; font-size: 0.7rem; color: var(--gray-600); font-weight: 500; }
+
+.weight-placements {
+  list-style: none;
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
 /* Footer */
 
 .footer {

@@ -8,34 +8,40 @@
  *    and falls back to a generic initials badge automatically if it's missing.
  *
  * TO ADD A NEW SCHOOL: add a { name: "...", slug: "..." } entry to SCHOOLS below.
- * slug = lowercase name, spaces/periods -> hyphens (see existing entries for the pattern).
+ * slug = lowercase name, spaces -> hyphens (see existing entries for the pattern).
+ *
+ * Source: confirmed 2027 team list from Daniel Emmons (Sep 2026).
  */
 
 const SCHOOLS = [
   { name: "Avonworth", slug: "avonworth" },
-  { name: "Baldwin-Whitehall", slug: "baldwin-whitehall" },
+  { name: "Baldwin", slug: "baldwin" },
   { name: "Bethel Park", slug: "bethel-park" },
   { name: "Carlynton", slug: "carlynton" },
   { name: "Chartiers Valley", slug: "chartiers-valley" },
+  { name: "Elizabeth Forward", slug: "elizabeth-forward" },
   { name: "Fox Chapel", slug: "fox-chapel" },
   { name: "Gateway", slug: "gateway" },
   { name: "Hampton", slug: "hampton" },
   { name: "Highlands", slug: "highlands" },
+  { name: "Keystone Oaks", slug: "keystone-oaks" },
   { name: "McKeesport", slug: "mckeesport" },
   { name: "Montour", slug: "montour" },
-  { name: "Moon Area", slug: "moon-area" },
-  { name: "Mt. Lebanon", slug: "mt-lebanon" },
-  { name: "The Neighborhood Academy", slug: "neighborhood-academy" },
+  { name: "Moon", slug: "moon" },
+  { name: "Mt Lebanon", slug: "mt-lebanon" },
+  { name: "Neighborhood Academy", slug: "neighborhood-academy" },
+  { name: "North Allegheny", slug: "north-allegheny" },
   { name: "North Hills", slug: "north-hills" },
   { name: "Penn Hills", slug: "penn-hills" },
+  { name: "Pine Richland", slug: "pine-richland" },
   { name: "Plum", slug: "plum" },
   { name: "Quaker Valley", slug: "quaker-valley" },
   { name: "Riverview", slug: "riverview" },
-  { name: "Shaler Area", slug: "shaler-area" },
+  { name: "Shaler", slug: "shaler" },
   { name: "South Allegheny", slug: "south-allegheny" },
   { name: "South Park", slug: "south-park" },
   { name: "Thomas Jefferson", slug: "thomas-jefferson" },
-  { name: "Upper Saint Clair", slug: "upper-saint-clair" },
+  { name: "West Allegheny", slug: "west-allegheny" },
   { name: "West Mifflin", slug: "west-mifflin" },
   { name: "Woodland Hills", slug: "woodland-hills" },
 ];
