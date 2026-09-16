@@ -15,7 +15,7 @@
 
 const SCHOOLS = [
   { name: "Avonworth", slug: "avonworth" },
-  { name: "Baldwin", slug: "baldwin" },
+  { name: "Baldwin Whitehall", slug: "baldwin-whitehall" },
   { name: "Bethel Park", slug: "bethel-park" },
   { name: "Carlynton", slug: "carlynton" },
   { name: "Chartiers Valley", slug: "chartiers-valley" },
@@ -37,7 +37,7 @@ const SCHOOLS = [
   { name: "Plum", slug: "plum" },
   { name: "Quaker Valley", slug: "quaker-valley" },
   { name: "Riverview", slug: "riverview" },
-  { name: "Shaler", slug: "shaler" },
+  { name: "Shaler Area", slug: "shaler-area" },
   { name: "South Allegheny", slug: "south-allegheny" },
   { name: "South Park", slug: "south-park" },
   { name: "Thomas Jefferson", slug: "thomas-jefferson" },
