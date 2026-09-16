@@ -510,8 +510,8 @@ a { color: inherit; }
   height: 64px;
   margin: 0 auto 14px;
   border-radius: 50%;
-  background: var(--navy-dark);
-  color: var(--gold);
+  background: var(--white);
+  color: var(--navy-dark);
   display: flex;
   align-items: center;
   justify-content: center;
