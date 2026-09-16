@@ -41,8 +41,18 @@
       <p id="teams-empty" class="schedule-note" style="display:none;">
         2027 school list coming soon &mdash; check back closer to the tournament.
       </p>
+      <p class="schedule-note">Click any school to see its full ACC placement history.</p>
     </div>
   </section>
+
+  <!-- School History Modal -->
+  <div id="history-modal" class="history-modal">
+    <div class="history-modal-dialog">
+      <button type="button" class="history-modal-close" aria-label="Close">&times;</button>
+      <h2 id="history-modal-title" class="history-modal-title"></h2>
+      <div id="history-modal-body" class="history-modal-body"><!-- rendered by schools.js --></div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
@@ -64,6 +74,7 @@
     </div>
   </footer>
 
+  <script src="assets/school-history-data.js"></script>
   <script src="schools.js"></script>
   <script>
     document.querySelector('.nav-toggle')?.addEventListener('click', function() {
