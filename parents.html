@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Participating Schools | ACC Jr. High Wrestling Championship</title>
+  <title>Parents | ACC Jr. High Wrestling Championship</title>
+  <meta name="description" content="Information for parents and families attending the Allegheny County Junior High Wrestling Championship.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,39 +23,36 @@
       </button>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="schools.html" class="active">Schools</a></li>
+        <li><a href="schools.html">Schools</a></li>
         <li><a href="results.html">Results</a></li>
         <li><a href="coaches.html">Coaches</a></li>
-        <li><a href="parents.html">Parents</a></li>
+        <li><a href="parents.html" class="active">Parents</a></li>
         <li><a href="sponsors.html">Sponsors</a></li>
       </ul>
     </div>
   </nav>
 
   <section class="page-hero">
-    <span class="section-eyebrow">2027 Field</span>
-    <h1>Participating Schools</h1>
-    <p>Junior high wrestling programs from across Allegheny County and the surrounding region compete at the ACC Championship.</p>
+    <span class="section-eyebrow">For Families</span>
+    <h1>Parent Information</h1>
+    <p>Everything parents and families need to know for tournament weekend.</p>
   </section>
 
   <section class="section">
     <div class="container">
-      <div id="teams-grid" class="teams-grid"><!-- rendered by schools.js --></div>
-      <p id="teams-empty" class="schedule-note" style="display:none;">
-        2027 school list coming soon &mdash; check back closer to the tournament.
-      </p>
-      <p class="schedule-note">Click any school to see its full ACC placement history.</p>
+      <!--
+        TODO(Daniel): This page is a placeholder. Send over parking,
+        directions, concessions, spectator admission details (or
+        just point to the Coaches page's spectator section), and
+        anything else families should know, and this becomes a real
+        page in the same style as coaches.html.
+      -->
+      <div class="placeholder-box">
+        <strong>Parent information coming soon.</strong>
+        <p style="margin-top:10px;">In the meantime, spectator admission details (pricing, hours) are posted on the <a href="coaches.html" style="color:var(--navy); font-weight:600;">Coaches page</a>.</p>
+      </div>
     </div>
   </section>
-
-  <!-- School History Modal -->
-  <div id="history-modal" class="history-modal">
-    <div class="history-modal-dialog">
-      <button type="button" class="history-modal-close" aria-label="Close">&times;</button>
-      <h2 id="history-modal-title" class="history-modal-title"></h2>
-      <div id="history-modal-body" class="history-modal-body"><!-- rendered by schools.js --></div>
-    </div>
-  </div>
 
   <footer class="footer">
     <div class="container">
@@ -78,8 +76,6 @@
     </div>
   </footer>
 
-  <script src="assets/school-history-data.js"></script>
-  <script src="schools.js"></script>
   <script>
     document.querySelector('.nav-toggle')?.addEventListener('click', function() {
       document.querySelector('.nav-menu').classList.toggle('active');
